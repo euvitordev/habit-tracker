@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <script
+      src="https://kit.fontawesome.com/15a9823835.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
 
     <link
       rel="apple-touch-icon"
@@ -31,15 +32,21 @@
     />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+
     <title>Habit Tracker</title>
   </head>
-  <body>
+  <body class="">
     <header>
-      <img src="./assets/habits.svg" alt="" />
-      <button>
-        <img src="./assets/add.svg" alt="icone com sinal de mais roxo" />
-        Registrar meu dia
-      </button>
+      <img class="logo-habits" src="./assets/habits.svg" alt="" />
+      <div class="name-temp">
+        <button class="add-habit">
+          <i class="fa-solid fa-plus"></i>
+          Novo hábito
+        </button>
+      </div>
     </header>
     <nav>
       <!-- Adicionar conteúdo para a navegação -->
@@ -90,5 +97,8 @@
     <footer>
       <!-- Adicionar conteúdo para o footer -->
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
