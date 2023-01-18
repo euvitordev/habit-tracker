@@ -3,18 +3,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
 
 :root {
   --background: #09090a;
+  --background-color: #8b5cf6;
   --text-color: #ffffff;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 48px;
+  --border: #8b5cf6;
+  --set-color: #16a34a;
+  --highlight-color-hover: rgba(255, 255, 255, 0.2);
 }
 
 body {
@@ -25,24 +23,34 @@ body {
   color: var(--text-color);
 }
 
-button {
+header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 48px;
+}
 
-  width: 250px;
+.add-habit {
+  display: flex;
+  align-items: center;
+  width: 173px;
   height: 52px;
   background-color: transparent;
   color: var(--text-color);
-  border: 1px solid #8b5cf6;
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 16px 24px;
   gap: 12px;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
+  cursor: pointer;
   line-height: 125%;
+  transition: 0.25s ease-in-out;
+}
+.add-habit:hover {
+  background-color: var(--background-color);
 }
 
 form {
@@ -99,6 +107,6 @@ input {
 }
 
 input:checked {
-  background: #8b5cf6;
-  border: 2px solid #a78bfa;
+  background: var(--background-color);
+  border: 2px solid #6cc08b;
 }
