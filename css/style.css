@@ -1,16 +1,104 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --background: #09090A;
-  }
-  
-  body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background: var(--background);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --background: #09090a;
+  --text-color: #ffffff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px;
+}
+
+body {
+  /* display: grid; */
+  /* place-items: center; */
+  height: 100vh;
+  background: var(--background);
+  color: var(--text-color);
+}
+
+button {
+  display: flex;
+  align-items: center;
+
+  width: 250px;
+  height: 52px;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid #8b5cf6;
+  border-radius: 8px;
+  padding: 16px 24px;
+  gap: 12px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+form {
+  display: flex;
+  padding: 0 48px;
+}
+
+.habits {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 60px;
+}
+.habit {
+  display: flex;
+  width: 40px;
+  height: 64px;
+  font-size: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  margin-left: 32px;
+  gap: 48px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
+  align-items: center;
+  color: #a1a1aa;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 64px;
+  height: 64px;
+  background: #18181b;
+  border: 2px solid #27272a;
+  border-radius: 8px;
+}
+
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
