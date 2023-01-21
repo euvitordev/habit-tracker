@@ -59,3 +59,28 @@ var dayOfWeek = daysOfWeek[today.getDay()]
 today = dd + "/" + mm
 document.getElementById("demo").innerHTML = today
 document.getElementById("dayof").innerHTML = dayOfWeek
+
+// Adicionando a funcionalidade de musica
+var player = document.getElementById("player")
+let playBtn = document.getElementById("play")
+
+var playPause = function () {
+  if (player.paused) {
+    player.play()
+  } else {
+    player.pause()
+  }
+}
+
+playBtn.addEventListener("click", playPause)
+
+player.onplay = function () {
+  playBtn.classList.remove("fa-play")
+  playBtn.classList.add("fa-pause")
+}
+
+player.onpause = function () {
+  playBtn.classList.add("fa-play")
+  playBtn.classList.remove("fa-pause")
+}
+// Adicionando a funcionalidade de musica
