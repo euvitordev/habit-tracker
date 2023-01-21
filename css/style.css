@@ -28,13 +28,14 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 48px;
+  position: fixed;
+  width: 100%;
+  background: var(--background);
 }
 
 .add-habit {
   display: flex;
   align-items: center;
-  width: 173px;
-  height: 52px;
   background-color: transparent;
   color: var(--text-color);
   border: 1px solid var(--border);
@@ -49,13 +50,15 @@ header {
   line-height: 125%;
   transition: 0.25s ease-in-out;
 }
+
 .add-habit:hover {
   background-color: var(--background-color);
 }
 
 form {
   display: flex;
-  padding: 0 48px;
+  padding: 182px 48px 48px;
+  width: fit-content;
 }
 
 .habits {
@@ -108,5 +111,89 @@ input {
 
 input:checked {
   background: var(--background-color);
-  border: 2px solid #6cc08b;
+  border: 2px solid #a78bfa;
+}
+
+@media (max-width: 570px) {
+  .add-habit {
+    width: 52px;
+    height: 52px;
+    align-items: center;
+    justify-content: center;
+  }
+  .add-habit div {
+    display: none;
+    transition: display 2s;
+  }
+}
+
+dialog {
+  padding: 24px;
+  width: 419px;
+  margin: 182px auto;
+  border: 0;
+  background: #18181b;
+  color: var(--text-color);
+  box-shadow: 4px 16px 24px rgba(0, 0, 0, 0.171);
+  border-radius: 16px;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+dialog p {
+  width: 340px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #a1a1aa;
+}
+
+dialog h2 {
+  width: 340px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 125%;
+}
+
+dialog h3 {
+  width: 340px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 125%;
+  margin-bottom: 25px;
+}
+
+dialog #confirm-habit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  color: var(--text-color);
+  width: 340px;
+  height: 52px;
+
+  background: #16a34a;
+  border-radius: 8px;
+  border: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  cursor: pointer;
 }
