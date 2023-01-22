@@ -5,6 +5,41 @@ const modal = document.querySelector("dialog")
 const closeModalButton = document.querySelector("dialog button")
 const playButton = document.getElementById("play")
 const player = document.getElementById("player")
+const newUser = document.getElementById("login")
+const newUserContinue = document.getElementById("continue")
+
+// Registrando nome do usuario
+function checkUsername() {
+  let storedUsername = localStorage.getItem("username")
+  if (storedUsername !== null) {
+    document.getElementById("login").style.display = "none"
+    document.getElementById("username").innerHTML = storedUsername
+  }
+}
+
+function saveUser() {
+  let name = document.getElementById("name").value
+  let input = document.getElementById("name")
+  let loginUsername = document.querySelector(".username")
+
+  if (name === "") {
+    // Trocar a mensagem no placeholder
+    input.placeholder = "Por favor, insira seu nome"
+    loginUsername.style.border = "1px solid red"
+  } else {
+    localStorage.setItem("username", name)
+    input.classList.remove("error")
+    document.getElementById("username").innerHTML = name
+    // Adicionar a classe de animação
+    document.getElementById("login").classList.add("fade")
+    // Recarregar a página após a animação
+    setTimeout(function () {
+      location.reload()
+    }, 1000)
+  }
+}
+
+// Registrando nome do usuario
 
 addHabitButton.addEventListener("click", add)
 form.addEventListener("change", save)
