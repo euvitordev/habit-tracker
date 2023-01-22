@@ -316,13 +316,20 @@ footer .music .controles #play:hover {
 }
 
 /* TELA DE LOGIN */
-/* #login {
+#login {
   display: flex;
+  position: fixed;
   align-items: center;
   justify-content: center;
+  top: 0;
   width: 100%;
   height: 100vh;
   margin: auto;
+  background: rgba(43, 43, 48, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
 }
 
 #login .login {
@@ -371,6 +378,12 @@ footer .music .controles #play:hover {
   margin-top: 20px;
 }
 
+#login .login .username:hover {
+  border: 1px solid #8b5cf6;
+  color: #8b5cf6;
+  transition: all 0.2s ease-in-out;
+}
+
 #login .login .username i {
   display: flex;
   align-items: center;
@@ -384,8 +397,8 @@ footer .music .controles #play:hover {
   background: transparent;
   color: var(--text-color);
   border: none;
+  width: 200px;
   height: 52px;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -416,4 +429,20 @@ footer .music .controles #play:hover {
   line-height: 125%;
   cursor: pointer;
   margin-top: 10px;
-} */
+}
+
+/* Define as propriedades de animação */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Adiciona a animação à classe .fade */
+.fade {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+}
