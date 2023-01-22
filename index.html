@@ -38,7 +38,7 @@
 
     <title>Habit Tracker</title>
   </head>
-  <body class="">
+  <body onload="checkUsername()">
     <header>
       <img class="logo-habits" src="./assets/habits.svg" alt="" />
       <button class="add-habit">
@@ -57,27 +57,44 @@
             <div class="habit" data-name="water">💧</div>
             <div class="habit" data-name="training">💪🏻</div>
             <div class="habit" data-name="to-sleep">💤</div>
-            <div class="habit" data-name="cat">🦮</div>
+            <div class="habit" data-name="to-study">📚</div>
             <div class="habit" data-name="food">🥗</div>
           </div>
           <div class="days"></div>
         </form>
-
         <dialog>
           <div class="modal">
-            <p>Olá 👋</p>
-            <h2>Vitor</h2>
+            <p id="greeting"></p>
+            <h2 id="username"></h2>
             <p id="dayof"></p>
             <h3 id="demo"></h3>
             <button id="confirm-habit"></button>
           </div>
         </dialog>
+        <!-- Capturando o nome do usuario -->
+        <div id="login">
+          <div class="login">
+            <img src="./assets/habits.svg" alt="" />
+            <h2>Bem-vindo ao Habists</h2>
+            <p>Faça um cadastro rapido para continuar</p>
+            <div id="username" class="username" class="error">
+              <i class="fa-solid fa-user"></i>
+              <input
+                type="text"
+                name="nome"
+                placeholder="Insira seu nome"
+                id="name"
+              />
+            </div>
+            <button id="continue" onclick="saveUser()">Continuar</button>
+          </div>
+        </div>
+        <!-- Capturando o nome do usuario -->
       </div>
     </main>
     <footer>
       <div class="music">
         <audio id="player" src="./musics/Mood Lofi.mp3"></audio>
-
         <img
           src="https://i.scdn.co/image/ab67706c0000da844d745a500be2218b40d655c6"
           alt=""
@@ -93,7 +110,6 @@
         </div>
       </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/music.js"></script>
