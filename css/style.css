@@ -314,3 +314,106 @@ footer .music .controles #play:hover {
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
 }
+
+/* TELA DE LOGIN */
+/* #login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+
+#login .login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+
+  background: rgba(43, 43, 48, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+
+  padding: 48px;
+}
+
+#login .login img {
+  margin-bottom: 50px;
+}
+#login .login h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 125%;
+}
+
+#login .login p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+#login .login .username {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 300px;
+  background-color: #27272a96;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#login .login .username i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+#login .login input {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: var(--text-color);
+  border: none;
+  height: 52px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 125%;
+
+  outline: none;
+}
+
+#login .login button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  color: var(--text-color);
+  width: 300px;
+  height: 52px;
+
+  background: var(--background-color);
+  border-radius: 8px;
+  border: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  cursor: pointer;
+  margin-top: 10px;
+} */
